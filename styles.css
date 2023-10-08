@@ -1,0 +1,419 @@
+html{
+    padding: 0px;margin: 0px;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.mainImg{
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.664); */
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.mainImg2{
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.664); */
+    top: 100vh;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.mainImg3{
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.664); */
+    top: 200vh;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.mainImg4{
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.664); */
+    top: 300vh;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.mainImg5{
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.664); */
+    top: 400vh;
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+}
+.mainImg6{
+    position: absolute;
+    /* background-color: rgba(0, 0, 0, 0.664); */
+    top: 460vh;
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.black{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.358);
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+}
+
+.eclipseballDiv{
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+}
+
+.eclipse_ballleft{
+    animation-name: ballLeft;
+    animation-duration: 2s;
+    position: absolute;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes ballLeft {
+    from{
+        left: 0%;
+        /* margin-left: 0px; */
+        transform: scale(1);
+    }
+    to{
+        left: -200%;
+        /* margin-left: -200px; */
+        transform: scale(3);
+    }
+}
+
+
+.eclipse_ballright{
+    animation-name: ballright;
+    animation-duration: 2s;
+    position: absolute;
+    margin-left: 180px;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;    
+}
+
+@keyframes ballright{
+    from{
+        left: 0%;
+        /* margin-right: -200px; */
+        transform: scale(1);
+    }
+    to{
+        left: 200%;
+        /* margin-right: 0px; */
+        transform: scale(3);
+    }
+}
+
+
+.mainText{
+    position: absolute;
+    font-size: 3rem;
+    color: whitesmoke;
+    top: 50%;
+    left: 50%;
+    margin-left: -240px;
+    margin-top: -120px;
+    flex-wrap: wrap;
+    text-wrap: wrap;
+    animation-name: mainTextAnim;
+    animation-duration: 3s;
+    animation-delay: 0.7s;
+    transform: scale(0);
+    animation-fill-mode: forwards;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainTextHead{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.mainTextSub{
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+}
+
+
+@keyframes mainTextAnim {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+.mainTextBtn{
+    /* width: 100px;
+    height: 30px; */
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.mainTextBtnText{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.mainTextBtnArrow{
+    width: 25px;
+}
+
+
+.sec1{
+    height: 100vh;
+    /* overflow-y: hidden; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.mainVid{
+    position: absolute;
+    width: 50rem;
+    /* border: 5px solid rgb(118, 118, 118); */
+}
+
+.sec1text1{
+    color: whitesmoke;
+    position: absolute;
+    top: 10%;
+    left: -50%;
+    /* right: 60%; */
+    font-size: 30px;
+    font-family:sans-serif;
+    font-weight: 800;
+    z-index: 66;
+    font-style: italic;
+    /* animation-name: sec1text1Anim; */
+    animation-duration: 1.5s;
+    width: 400px;
+    /* animation-delay: 4s; */
+    animation-fill-mode: forwards;
+
+}
+.sec1text2{
+    color: whitesmoke;
+    position: absolute;
+    top: 60%;
+    right: -50%;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: 800;
+    z-index: 66;
+    font-style: italic;
+    /* animation-name: sec1text2Anim; */
+    animation-duration: 1.5s;
+    width: 400px;
+    /* animation-delay: 4s; */
+    animation-fill-mode: forwards;
+}
+
+@keyframes sec1text1Anim {
+    from{
+        left: -50%;
+        opacity: 0;
+    }
+    to{
+        left: 10%;
+        opacity: 1;
+    }
+}
+
+@keyframes sec1text2Anim {
+    from{
+        right: -50%;
+        opacity: 0;
+    }
+    to{
+        /* left: 10%; */
+        opacity: 1;
+        right: 7%;
+    }
+}
+
+
+.sec2{
+    position: relative;
+    margin-top: 10rem;
+}
+
+.sun{
+    position: absolute;
+    left: 0%;
+    top: 0px;
+    width:30rem;
+    /* animation-name: sun; */
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    left: 150%;
+}
+.moon{
+    position: absolute;
+    left: 25%;
+    top: 0px;
+    width:40rem;
+    /* animation-name: moon; */
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    left: 150%;
+}
+
+.earth{
+    position: absolute;
+    left: 60%;
+    top: 0px;
+    width:50rem;
+    /* animation-name: earth; */
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    left: 150%;
+}
+
+@keyframes sun {
+    from{
+        left: 150%;
+    }
+    to{
+        left: 0%;
+    }
+}
+@keyframes moon {
+    from{
+        left: 150%;
+    }
+    to{
+        left: 25%;
+    }
+}
+@keyframes earth {
+    from{
+        left: 150%;
+    }
+    to{
+        left: 60%;
+    }
+}
+
+.sec2TextDiv{
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 500px;
+    height: 400px;
+    margin-left: -250px;
+    margin-top: 150px;
+    /* background-color: rgba(0, 0, 0, 0.459); */
+}
+
+.sec2Text{
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    font-family:sans-serif;
+    padding: 10px;
+    padding-top: 100px;
+    font-weight: 800;
+    font-style: italic;
+    text-align: center;
+}
+
+.sec3{
+    position: relative;
+    margin-top: 80rem;
+}
+
+.sec3Vid{
+    position: absolute;
+    top: 0%;
+    width: 800px;
+    left: 70%;
+    margin-left: -400px;
+    border: 2px solid rgb(255, 187, 0);
+}
+
+.sec3Text{
+    width: 500px;
+    position: absolute;
+    left: 6%;
+    margin-top: 100px;
+    color: white;
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+
+.sec3TextSub{
+    font-size: 20px;
+}
+
+.sec4{
+    position: relative;
+}
+
+.sec4Text{
+    color: white;
+    font-size: 20px;
+    font-weight: 800;
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    margin-top: 600px;
+    width: 450px;
+}
+
+.sec4Img{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 600px;
+    margin-top: 600px;
+    margin-left: 100px;
+}
+
+.sec5{
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    color: rgb(228, 228, 228);
+    font-weight: 800;
+    font-size: 20px;
+    margin-top: 360vh;
+    padding-bottom: 10px;
+}

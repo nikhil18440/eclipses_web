@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Eclipse:Perspective is everything</title>
+</head>
+<body class="body">
+
+    <!-- <video src="./assets/eclipse_vid.mp4" autoplay loop class="bgVid"></video> -->
+    <img src="./assets/nasa-galaxy_9pu4.1248.webp" class="mainImg" alt="">
+    <img src="./assets/nasa-galaxy_9pu4.1248.webp" class="mainImg2" alt="">
+    <img src="./assets/nasa-galaxy_9pu4.1248.webp" class="mainImg3" alt="">
+    <img src="./assets/nasa-galaxy_9pu4.1248.webp" class="mainImg4" alt="">
+    <img src="./assets/nasa-galaxy_9pu4.1248.webp" class="mainImg5" alt="">
+    <img src="./assets/nasa-galaxy_9pu4.1248.webp" class="mainImg6" alt="">
+
+    
+    <div class="black"></div>
+
+
+    <!-- <nav>
+        <div class="navHome"></div>
+        <div class="explore"></div>
+        .resources
+    </nav> -->
+
+    <main class="main">
+        <div class="eclipseballDiv">
+            <img src="./assets/eclipse_ball_left.png" class="eclipse_ballleft" alt="">
+            <img src="./assets/eclipse_ball_right.png" class="eclipse_ballright" alt="">
+        </div>
+
+        <div class="mainText">
+            <h1 class="mainTextHead">ECLIPSES</h1>
+            <h6 class="mainTextSub">PERSPECTIVE IS EVERYTHING</h6>
+            <button class="mainTextBtn" onclick="scrollHandle()">
+                <div class="mainTextBtnText">EXPLORE</div>
+                <img class="mainTextBtnArrow" src="./assets/d_arrow.png"/>
+            </button>
+        </div>
+        
+    </main>
+
+    <section class="sec1">
+        <video autoplay muted class="mainVid">
+            <source  src="./assets/Total solar eclipse animation.mp4" >
+        </video>
+
+        <div class='sec1text1 reveal'>Lunar eclipses occur when Earth passes between the Sun and the Moon, casting a shadow on the Moon </div>
+        <div class="sec1text2 reveal">Solar eclipses may be classified as either total, in which the Moon completely covers the Sun, or annular, in which the Moon obscures all but an outer ring of the Sun.</div>
+    </section>
+
+    <section class="sec2">
+        <img src="./assets/sun.png" alt="" class="sun">
+        <img src="./assets/moon.png" alt="" class="moon">
+        <img src="./assets/earth.png" alt="" class="earth">
+
+        <div class="sec2TextDiv">
+            <div class="sec2Text">The Moon's shadow on Earth isn't very big, so only a small portion of places on Earth will see it</div>
+        </div>
+    </section>
+
+    <section class="sec3">
+        <video autoplay loop muted class="sec3Vid">
+            <source src="./assets/129896 (Original) (1).mp4">
+        </video>
+        <div class="sec3Text">
+            <div class="sec3TextHead">APRIL 8, 2024</div>
+            <div class="sec3TextHead">Solar Eclipse</div>
+            <div class="sec3TextSub">On April 28 2024, a total eclipse will ctoss north america passing over mexico, United States and Canada</div>
+        </div>
+    </section>
+
+    <section class="sec4">
+        <div class="sec4Text">Safety
+            Except during the brief total phase of a total solar eclipse, when the Moon completely blocks the Sun’s bright face, it is not safe to look directly at the Sun without specialized eye protection for solar viewing. Viewing any part of the bright Sun through a camera lens, binoculars, or a telescope without a special-purpose solar filter secured over the front of the optics will instantly cause severe eye injury.
+            
+            When watching the partial phases of the solar eclipse directly with your eyes, which happens before and after totality, you must look through safe solar viewing glasses (“eclipse glasses”) or a safe handheld solar viewer at all times. You can also use an indirect viewing method, such as a pinhole projector.​</div>
+            <img src="./assets/5685_5685-1.webp" alt="" class="sec4Img">
+        </section>
+
+        
+        
+        
+        <div class="sec5">Crew-Z</div>
+
+
+    <script>
+
+        let sec1 = document.getElementsByClassName('sec1')[0]
+        let main = document.getElementsByClassName('main')[0]
+        // let body = document.getElementsByClassName('body')[0]
+        let sec1text1 = document.getElementsByClassName('sec1text1')[0]
+        let sec1text2 = document.getElementsByClassName('sec1text2')[0]
+
+        let sun = document.getElementsByClassName('sun')[0]
+        let moon = document.getElementsByClassName('moon')[0]
+        let earth = document.getElementsByClassName('earth')[0]
+
+
+
+        setInterval(() => {
+            
+            if(window.pageYOffset > 450){
+                sec1text1.style.animationName = 'sec1text1Anim'
+                sec1text2.style.animationName = 'sec1text2Anim'
+            }
+            if(window.pageYOffset > 1300){
+                sun.style.animationName = 'sun'
+                moon.style.animationName = 'moon'
+                earth.style.animationName = 'earth'
+            }
+            console.log(window.pageYOffset)
+
+        }, 1500);
+        function scrollHandle() {
+
+            // body.style.overflowY = 'visible'
+
+            sec1.scrollIntoView()
+
+            sec1.style.height = '100vh'
+            sec1.style.overflowY = 'visible'
+            sec2.style.height = '100vh'
+            sec2.style.overflowY = 'visible'
+
+            sec1text1.style.animationName = 'sec1text1Anim'
+            sec1text2.style.animationName = 'sec1text2Anim'
+
+            var windowHeight = window.innerHeight
+            var elementTop = sec1text1.getBoundingClientRect().top
+            var elementVisible = 150
+            if(elementTop < windowHeight - elementVisible){
+                // reaveals[i].classList.add('active')
+                sec1text1.style.animationName = 'sec1text1Anim'
+            }else{
+                // reaveals[i].classList.REMOVE("active")
+                sec1text1.style.animationName = ''
+            }
+
+        }
+
+
+        // window.addEventListener('scroll', function () {
+        //     if (isScrollIntoView(sec1)){
+        //         sec1text1.style.animationName = 'sec1text1Anim'
+        //     }
+        // })
+
+    </script>
+
+    <script>
+        // const options = {
+        //     root: null,
+        //     rootMargin: '0px',
+        //     threshold: .4
+        // }
+
+        // const callbacks = (entries) => {
+        //     entries.forEach(entry => {
+        //         if (entry.isIntersecting){
+        //             entry.target.classList.add('active')
+        //         }
+        //     });
+        // }
+
+        // let observer = new IntersectionObserver(cb, options)
+
+        // observer.observe(sec1text1)
+
+        function reveal() {
+            // var reaveals = document.querySelectorAll('.reveal')
+
+            // for (let i = 0; i < reaveals.length; i++) {
+            var windowHeight = window.innerHeight
+            var elementTop = reaveals[i].getBoundingClientRect().top
+            var elementVisible = 150
+            if(elementTop < windowHeight - elementVisible){
+                // reaveals[i].classList.add('active')
+                sec1text1.style.animationName = 'sec1text1Anim'
+            }else{
+                // reaveals[i].classList.REMOVE("active")
+                sec1text1.style.animationName = ''
+            }
+            // }
+        }
+
+
+
+    </script>
+
+    <!-- <script async custom-element="amp-position-observer" src="https://cdn.ampproject.org/v0/amp-position-observer-0.1.js"></script> -->
+
+
+</body>
+</html>
